@@ -25,7 +25,7 @@ On linux/Cinnamon (and windows), pressing &lt;alt&gt;&lt;tab&gt; pops up a list 
 navigate and select a window to switch to. When a different window is selected, the current window is pushed down, and
 the new window comes forward.
 
-<img align="right" src="https://github.com/ToolChainGang/AltTab-Replacement/wiki/images/TaskOrder1.png">
+<img align="right" src="https://github.com/ToolChainGang/AltTab-Replacement/wiki/images/TaskOrder1.png" width="100%" />
 
 The problem is that alt-tab sorts the windows in least-recently-used order; meaning, the window you are in is the 1st
 position, the one you were in last is in 2nd position, and so on.
@@ -33,8 +33,8 @@ position, the one you were in last is in 2nd position, and so on.
 This works for switching between two - and only two - windows, but if you need three or more it quickly becomes a
 permutation engine. Selecting the 4th window puts the 1st window in 2nd place, the 2nd window in 3rd place, and so on.
 
-<img align="right" src="https://github.com/ToolChainGang/AltTab-Replacement/wiki/images/TaskOrder2.png">
-<img align="right" src="https://github.com/ToolChainGang/AltTab-Replacement/wiki/images/TaskOrder3.png">
+<img align="right" src="https://github.com/ToolChainGang/AltTab-Replacement/wiki/images/TaskOrder2.png" width="100%" />
+<img align="right" src="https://github.com/ToolChainGang/AltTab-Replacement/wiki/images/TaskOrder3.png" width="100%" />
 
 For example, if you simultaneously use an editor for source, a command window to build, and a third window for test
 (seeing the results), you cannot quickly switch between windows because the ordering is always different. You have to
