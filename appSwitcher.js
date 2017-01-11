@@ -19,17 +19,19 @@ function sortWindowsByUserPos(win1, win2) {
     let c2 = win2.get_wm_class();
 
     //
-    // Get the task ordering for the current workspace.
+    // If there is a task ordering for this named workspace, use it.
     //
-    let Workspace = 1 + global.screen.get_active_workspace().index();
-    let ORDERENV  = 'ALTTABORDER' + Workspace.toString();
+    // (Also works for default names if the user hasn't changed them)
+    //
+    let WSName    = Main.getWorkspaceName(global.screen.get_active_workspace().index());
+    let ORDERENV  = 'ALT_TAB_' + WSName;
     let TaskOrder = GLib.getenv(ORDERENV);
 
     //
     //  If no workspace-specific ordering is found, look for the generic ordering.
     //
     if( !TaskOrder )
-        TaskOrder = GLib.getenv('ALTTABORDER');
+        TaskOrder = GLib.getenv('ALT_TAB_ORDER');
 
     //
     // If *that's* not found, order by title
@@ -169,7 +171,7 @@ AppSwitcher.prototype = {
         if (this._currentIndex < 0) {
             this._currentIndex = 0;
         }
-        this._currentIndex = this._windows.length-1;        // ALT-TAB - ADDED THIS LINE
+        this._currentIndex = this._windows.length-1;        // ADD THIS LINE
 
         this._modifierMask = primaryModifier(binding.get_mask());
 
